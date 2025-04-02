@@ -1,0 +1,300 @@
+<!-- Dating Compatibility Calculator -->
+<div class="calculator-container humorous-calculator dating-calculator" id="datingCalculator">
+    <div class="calculator">
+        <div class="input-group">
+            <label class="input-label">Your Name</label>
+            <input type="text" class="input-field" id="yourName" placeholder="Enter your name">
+            
+            <label class="input-label">Crush's Name</label>
+            <input type="text" class="input-field" id="crushName" placeholder="Enter your crush's name">
+            
+            <div class="slider-container">
+                <label class="input-label">How desperate are you? <span id="desperationValue">5</span>/10</label>
+                <input type="range" min="1" max="10" value="5" class="slider" id="desperationSlider">
+                <div class="slider-labels">
+                    <span>Barely</span>
+                    <span>Very</span>
+                </div>
+            </div>
+            
+            <div class="checkbox-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" class="checkbox-input" id="sharedInterests">
+                    You both like the same Netflix shows
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" class="checkbox-input" id="textingHabit">
+                    They've texted you back within 24 hours
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" class="checkbox-input" id="friendsApproval">
+                    Your friends think they're "not the worst"
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" class="checkbox-input" id="attractiveness">
+                    They're slightly out of your league
+                </label>
+            </div>
+            
+            <label class="input-label">Zodiac Sign Compatibility</label>
+            <select class="input-select" id="zodiacCompatibility">
+                <option value="high">Perfect match (according to Cosmo)</option>
+                <option value="medium" selected>Somewhat compatible</option>
+                <option value="low">The stars say no</option>
+                <option value="none">You think astrology is nonsense</option>
+            </select>
+        </div>
+        
+        <button class="calculate-btn" id="calculateDating"><i class="fas fa-heart heart-icon"></i> Calculate Compatibility</button>
+        
+        <div class="result-container" id="datingResult">
+            <div class="result-title"><i class="fas fa-heart heart-icon"></i> Compatibility Result</div>
+            <div class="result-score" id="compatibilityScore">0%</div>
+            <div class="result-meter">
+                <div class="result-meter-fill compatibility-meter-fill" id="compatibilityMeter" style="width: 0%"></div>
+            </div>
+            <div class="result-content" id="compatibilityResult">
+                Enter your information above and click "Calculate Compatibility" to see your results.
+            </div>
+        </div>
+        
+        <p class="sarcastic-tip" id="datingTip">Love is just a chemical reaction that compels animals to breed. Rise above. Focus on science.</p>
+    </div>
+    
+    <div class="history-panel">
+        <div class="history-header">
+            <h3>Compatibility History</h3>
+            <button class="history-clear" id="clearDatingHistory">Clear</button>
+        </div>
+        <div class="history-list" id="datingHistoryList">
+            <!-- History entries will be added here dynamically -->
+            <div class="history-item">
+                <div class="history-calculation">No calculations yet</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Excuse Generator Calculator -->
+<div class="calculator-container humorous-calculator excuse-calculator" id="excuseCalculator">
+    <div class="calculator">
+        <div class="input-group">
+            <label class="input-label">What are you avoiding?</label>
+            <select class="input-select" id="excuseType">
+                <option value="work">Work deadline</option>
+                <option value="social">Social event</option>
+                <option value="date">Date</option>
+                <option value="family">Family gathering</option>
+                <option value="exercise">Exercise</option>
+                <option value="chores">Household chores</option>
+            </select>
+            
+            <label class="input-label">How important is it?</label>
+            <select class="input-select" id="excuseImportance">
+                <option value="low">Not important (nobody will notice)</option>
+                <option value="medium" selected>Somewhat important (might get a text)</option>
+                <option value="high">Very important (people are waiting)</option>
+                <option value="critical">Critical (career/relationship threatening)</option>
+            </select>
+            
+            <div class="slider-container">
+                <label class="input-label">How believable should it be? <span id="believabilityValue">7</span>/10</label>
+                <input type="range" min="1" max="10" value="7" class="slider" id="believabilitySlider">
+                <div class="slider-labels">
+                    <span>Obviously fake</span>
+                    <span>Totally real</span>
+                </div>
+            </div>
+            
+            <div class="checkbox-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" class="checkbox-input" id="usedBefore">
+                    You've used excuses for this before
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" class="checkbox-input" id="needEvidence">
+                    You're willing to fake evidence
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" class="checkbox-input" id="includeIllness">
+                    Include health-related excuses
+                </label>
+            </div>
+        </div>
+        
+        <button class="calculate-btn" id="generateExcuse"><i class="fas fa-comment-dots excuse-icon"></i> Generate Excuse</button>
+        
+        <div class="result-container" id="excuseResult">
+            <div class="result-title"><i class="fas fa-comment-dots excuse-icon"></i> Your Perfect Excuse</div>
+            <div class="result-score" id="excuseQuality">0/10</div>
+            <div class="result-meter">
+                <div class="result-meter-fill excuse-quality-meter-fill" id="excuseQualityMeter" style="width: 0%"></div>
+            </div>
+            <div class="result-content" id="excuseText">
+                Fill out the form above and click "Generate Excuse" to create your alibi.
+            </div>
+            <div class="result-explanation" id="excuseExplanation"></div>
+        </div>
+        
+        <p class="sarcastic-tip" id="excuseTip">Remember, it's not lying if you convince yourself it's true first.</p>
+    </div>
+    
+    <div class="history-panel">
+        <div class="history-header">
+            <h3>Excuse History</h3>
+            <button class="history-clear" id="clearExcuseHistory">Clear</button>
+        </div>
+        <div class="history-list" id="excuseHistoryList">
+            <!-- History entries will be added here dynamically -->
+            <div class="history-item">
+                <div class="history-calculation">No excuses generated yet</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Procrastination Cost Calculator -->
+<div class="calculator-container humorous-calculator procrastination-calculator" id="procrastinationCalculator">
+    <div class="calculator">
+        <div class="input-group">
+            <label class="input-label">Task you're avoiding</label>
+            <input type="text" class="input-field" id="taskName" placeholder="Enter the task you're procrastinating on">
+            
+            <label class="input-label">Your hourly value ($)</label>
+            <input type="number" class="input-field" id="hourlyRate" placeholder="How much is your time worth per hour?" value="25">
+            
+            <label class="input-label">Task deadline</label>
+            <input type="date" class="input-field" id="taskDeadline">
+            
+            <label class="input-label">Estimated hours to complete</label>
+            <input type="number" class="input-field" id="hoursNeeded" placeholder="How many hours will it take?" value="4">
+            
+            <div class="slider-container">
+                <label class="input-label">Stress level <span id="stressValue">5</span>/10</label>
+                <input type="range" min="1" max="10" value="5" class="slider" id="stressSlider">
+                <div class="slider-labels">
+                    <span>Mildly annoyed</span>
+                    <span>Total panic</span>
+                </div>
+            </div>
+            
+            <div class="checkbox-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" class="checkbox-input" id="scrollingSocial">
+                    You're scrolling social media instead
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" class="checkbox-input" id="watchingVideos">
+                    You're watching "just one more" video
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" class="checkbox-input" id="cleaningInstead">
+                    You're suddenly interested in cleaning
+                </label>
+            </div>
+        </div>
+        
+        <button class="calculate-btn" id="calculateProcrastination"><i class="fas fa-hourglass-half time-icon"></i> Calculate Procrastination Cost</button>
+        
+        <div class="result-container" id="procrastinationResult">
+            <div class="result-title"><i class="fas fa-hourglass-half time-icon"></i> Procrastination Analysis</div>
+            <div class="result-score" id="procrastinationCost">$0</div>
+            <div class="result-meter">
+                <div class="result-meter-fill cost-meter-fill" id="costMeter" style="width: 0%"></div>
+            </div>
+            <div class="result-content" id="procrastinationAnalysis">
+                Enter your information above and click "Calculate Procrastination Cost" to see how much your procrastination is costing you.
+            </div>
+        </div>
+        
+        <p class="sarcastic-tip" id="procrastinationTip">Why do today what you can put off until your deadline-induced panic attack?</p>
+    </div>
+    
+    <div class="history-panel">
+        <div class="history-header">
+            <h3>Procrastination History</h3>
+            <button class="history-clear" id="clearProcrastinationHistory">Clear</button>
+        </div>
+        <div class="history-list" id="procrastinationHistoryList">
+            <!-- History entries will be added here dynamically -->
+            <div class="history-item">
+                <div class="history-calculation">No calculations yet</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Meeting Productivity Calculator -->
+<div class="calculator-container humorous-calculator meeting-calculator" id="meetingCalculator">
+    <div class="calculator">
+        <div class="input-group">
+            <label class="input-label">Meeting name</label>
+            <input type="text" class="input-field" id="meetingName" placeholder="Enter meeting name">
+            
+            <label class="input-label">Number of attendees</label>
+            <input type="number" class="input-field" id="attendeeCount" placeholder="How many people are attending?" value="5">
+            
+            <label class="input-label">Average salary per attendee ($/hour)</label>
+            <input type="number" class="input-field" id="averageSalary" placeholder="Average hourly salary" value="35">
+            
+            <label class="input-label">Meeting duration (minutes)</label>
+            <input type="number" class="input-field" id="meetingDuration" placeholder="How long is the meeting?" value="60">
+            
+            <div class="slider-container">
+                <label class="input-label">Meeting necessity <span id="necessityValue">5</span>/10</label>
+                <input type="range" min="1" max="10" value="5" class="slider" id="necessitySlider">
+                <div class="slider-labels">
+                    <span>Could be an email</span>
+                    <span>Actually important</span>
+                </div>
+            </div>
+            
+            <div class="checkbox-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" class="checkbox-input" id="hasAgenda">
+                    Has a clear agenda
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" class="checkbox-input" id="mandatoryAttendance">
+                    Attendance is mandatory
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" class="checkbox-input" id="recurringMeeting">
+                    It's a recurring meeting
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" class="checkbox-input" id="laptopsAllowed">
+                    People are on laptops "taking notes"
+                </label>
+            </div>
+        </div>
+        
+        <button class="calculate-btn" id="calculateMeeting"><i class="fas fa-users meeting-icon"></i> Calculate Meeting Productivity</button>
+        
+        <div class="result-container" id="meetingResult">
+            <div class="result-title"><i class="fas fa-users meeting-icon"></i> Meeting Analysis</div>
+            <div class="result-score" id="meetingCost">$0</div>
+            <div class="result-meter">
+                <div class="result-meter-fill productivity-meter-fill" id="productivityMeter" style="width: 0%"></div>
+            </div>
+            <div class="result-content" id="meetingAnalysis">
+                Enter your meeting details above and click "Calculate Meeting Productivity" to see the true cost of your meeting.
+            </div>
+        </div>
+        
+        <p class="sarcastic-tip" id="meetingTip">A meeting is an event where minutes are kept and hours are lost.</p>
+    </div>
+    
+    <div class="history-panel">
+        <div class="history-header">
+            <h3>Meeting History</h3>
+            <button class="history-clear" id="clearMeetingHistory">Clear</button>
+        </div>
+        <div class="history-list" id="meetingHistoryList">
+            <!-- History entries will be added here dynamically -->
+            <div class="history-item">
+                <div class="history-calculation">No calculations yet</div>
+            </div>
+        </div>
+    </div>
+</div>
