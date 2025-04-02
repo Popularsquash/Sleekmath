@@ -1,0 +1,192 @@
+/* Scientific calculator styling */
+.scientific {
+  background-color: var(--calculator-bg);
+}
+
+.mode-toggle {
+  display: flex;
+  background-color: #1a1a1a;
+  border-bottom: 1px solid #333;
+}
+
+.mode-btn {
+  flex: 1;
+  background-color: transparent;
+  border: none;
+  color: var(--text-color);
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mode-btn.active {
+  background-color: var(--primary-color);
+  color: #000;
+}
+
+.angle-toggle {
+  display: flex;
+  background-color: #1a1a1a;
+  border-bottom: 1px solid #333;
+}
+
+.angle-btn {
+  flex: 1;
+  background-color: transparent;
+  border: none;
+  color: var(--text-color);
+  padding: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.angle-btn.active {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+.memory-buttons {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1px;
+  background-color: #1a1a1a;
+  border-bottom: 1px solid #333;
+}
+
+.memory-btn {
+  background-color: #252525;
+  border: none;
+  color: var(--text-color);
+  padding: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.memory-btn:hover {
+  background-color: #2a2a2a;
+}
+
+.scientific .buttons {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.scientific-buttons {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  background-color: #1a1a1a;
+}
+
+.scientific-buttons button {
+  border: none;
+  outline: none;
+  padding: 15px 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+}
+
+.scientific-buttons button:hover {
+  opacity: 0.8;
+}
+
+.scientific-buttons button:active {
+  transform: scale(0.95);
+}
+
+.function-btn {
+  background-color: #252525 !important;
+}
+
+.scientific .operator {
+  background-color: var(--operator-bg);
+  color: #000;
+}
+
+.scientific .equals {
+  background-color: var(--equals-bg);
+  color: #000;
+}
+
+/* Programmer mode */
+.programmer-display {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: #121212;
+}
+
+.bit-representation {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+
+.bit-row {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.bit-label {
+  width: 40px;
+  color: var(--secondary-color);
+}
+
+.bit-value {
+  flex: 1;
+  letter-spacing: 1px;
+}
+
+.base-values {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.base-row {
+  display: flex;
+}
+
+.base-label {
+  width: 40px;
+  color: var(--secondary-color);
+}
+
+.base-value {
+  flex: 1;
+  font-family: monospace;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  .scientific-buttons button {
+    padding: 12px 8px;
+    font-size: 0.9rem;
+  }
+  
+  .memory-buttons {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .memory-btn {
+    padding: 6px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .scientific-buttons {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .scientific-buttons button {
+    padding: 10px 6px;
+    font-size: 0.8rem;
+  }
+}
