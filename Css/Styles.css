@@ -1,1 +1,504 @@
+/* Base styles for the Sleekmath calculator application */
+:root {
+  /* Define variables for light theme (can be overridden by dark theme) */
+  --background-color: #f5f5f5;
+  --text-color: #333;
+  --calculator-bg: #fff;
+  --button-bg: #e0e0e0;
+  --button-text: #333;
+  --button-hover: #d0d0d0;
+  --special-button-bg: #f0f0f0;
+  --operator-button-bg: #f8f8f8;
+  --equals-button-bg: #4caf50;
+  --equals-button-text: #fff;
+  --display-bg: #f9f9f9;
+  --border-color: #ddd;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
 
+/* Typography */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Layout */
+.calculator-hub-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.hub-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.hub-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.hub-subtitle {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #666;
+}
+
+.sarcastic-message {
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+/* Calculator Selector */
+.calculator-selector {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.calculator-type {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: var(--calculator-bg);
+  box-shadow: 0 4px 6px var(--shadow-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100px;
+}
+
+.calculator-type:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px var(--shadow-color);
+}
+
+.calculator-type.active {
+  border: 2px solid var(--equals-button-bg);
+}
+
+.calculator-type-icon {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.calculator-type-name {
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Calculator Content */
+.calculator-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.calculator-container {
+  display: none;
+  flex: 1;
+  min-width: 300px;
+}
+
+.calculator-container.active {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Basic Calculator Styles */
+.calculator {
+  background-color: var(--calculator-bg);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px var(--shadow-color);
+  overflow: hidden;
+  flex: 1;
+  min-width: 300px;
+}
+
+.display {
+  background-color: var(--display-bg);
+  padding: 20px;
+  text-align: right;
+}
+
+.previous-operand {
+  font-size: 1.2rem;
+  color: #777;
+  min-height: 24px;
+}
+
+.current-operand {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-top: 5px;
+  word-break: break-all;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background-color: var(--border-color);
+}
+
+button {
+  border: none;
+  outline: none;
+  background-color: var(--button-bg);
+  font-size: 1.25rem;
+  padding: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: var(--button-hover);
+}
+
+button.special {
+  background-color: var(--special-button-bg);
+}
+
+button.operator {
+  background-color: var(--operator-button-bg);
+}
+
+button.equals {
+  background-color: var(--equals-button-bg);
+  color: var(--equals-button-text);
+}
+
+button.number.zero {
+  grid-column: span 2;
+}
+
+/* History Panel */
+.history-panel {
+  background-color: var(--calculator-bg);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px var(--shadow-color);
+  overflow: hidden;
+  flex: 0 0 300px;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.history-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.history-clear {
+  background: none;
+  border: none;
+  color: #f44336;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 5px 10px;
+}
+
+.history-list {
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.history-item {
+  padding: 10px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.history-calculation {
+  font-size: 1rem;
+}
+
+.history-result {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+/* Scientific Calculator Styles */
+.scientific-buttons {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.mode-toggle, .angle-toggle {
+  display: flex;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.mode-btn, .angle-btn {
+  flex: 1;
+  padding: 10px;
+  font-size: 0.9rem;
+  background-color: var(--button-bg);
+  border: none;
+  cursor: pointer;
+}
+
+.mode-btn.active, .angle-btn.active {
+  background-color: var(--equals-button-bg);
+  color: var(--equals-button-text);
+}
+
+/* Financial Calculator Styles */
+.calculator-type-selector {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.calculator-type-btn {
+  flex: 1;
+  padding: 10px;
+  font-size: 0.9rem;
+  background-color: var(--button-bg);
+  border: none;
+  cursor: pointer;
+  min-width: 100px;
+}
+
+.calculator-type-btn.active {
+  background-color: var(--equals-button-bg);
+  color: var(--equals-button-text);
+}
+
+.financial-calc-section {
+  display: none;
+  padding: 20px;
+}
+
+.financial-calc-section.active {
+  display: block;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.input-label {
+  flex: 0 0 150px;
+  font-size: 1rem;
+}
+
+.input-field {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.input-suffix {
+  margin-left: 10px;
+  font-size: 1rem;
+  color: #777;
+}
+
+.calculate-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--equals-button-bg);
+  color: var(--equals-button-text);
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.result-container {
+  margin-bottom: 20px;
+}
+
+.result-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.result-label {
+  font-weight: 500;
+}
+
+.result-value {
+  font-weight: 700;
+}
+
+.sarcastic-tip {
+  font-style: italic;
+  color: #777;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* BMI Calculator Styles */
+.unit-toggle {
+  display: flex;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.unit-btn {
+  flex: 1;
+  padding: 10px;
+  font-size: 0.9rem;
+  background-color: var(--button-bg);
+  border: none;
+  cursor: pointer;
+}
+
+.unit-btn.active {
+  background-color: var(--equals-button-bg);
+  color: var(--equals-button-text);
+}
+
+.bmi-value {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.bmi-category {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.bmi-description {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.bmi-scale {
+  display: flex;
+  height: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  margin-top: 20px;
+}
+
+.scale-segment {
+  flex: 1;
+  height: 100%;
+}
+
+.scale-segment.underweight {
+  background-color: #2196F3;
+}
+
+.scale-segment.normal {
+  background-color: #4CAF50;
+}
+
+.scale-segment.overweight {
+  background-color: #FF9800;
+}
+
+.scale-segment.obese {
+  background-color: #F44336;
+}
+
+.scale-marker {
+  position: absolute;
+  width: 10px;
+  height: 30px;
+  background-color: #333;
+  top: -5px;
+  transform: translateX(-50%);
+  transition: left 0.3s ease;
+}
+
+/* Ad Containers */
+.ad-container {
+  background-color: var(--calculator-bg);
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header-ad {
+  min-height: 90px;
+}
+
+.sidebar-ad {
+  min-height: 600px;
+  flex: 0 0 300px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .calculator-content {
+    flex-direction: column;
+  }
+  
+  .sidebar-ad {
+    display: none;
+  }
+  
+  .calculator-type {
+    width: 80px;
+  }
+  
+  .scientific-buttons {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .function-btn {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .calculator-type {
+    width: 60px;
+    padding: 10px;
+  }
+  
+  .calculator-type-icon {
+    font-size: 18px;
+  }
+  
+  .calculator-type-name {
+    font-size: 12px;
+  }
+  
+  .current-operand {
+    font-size: 2rem;
+  }
+  
+  button {
+    padding: 15px;
+    font-size: 1rem;
+  }
+}
