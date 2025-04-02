@@ -1,0 +1,263 @@
+/* Dark Theme Styles for Sleekmath Calculator */
+:root {
+  /* Override variables with dark theme values */
+  --background-color: #121212;
+  --text-color: #e0e0e0;
+  --calculator-bg: #1e1e1e;
+  --button-bg: #2d2d2d;
+  --button-text: #e0e0e0;
+  --button-hover: #3d3d3d;
+  --special-button-bg: #3d3d3d;
+  --operator-button-bg: #2a2a2a;
+  --equals-button-bg: #00c853;
+  --equals-button-text: #fff;
+  --display-bg: #1a1a1a;
+  --border-color: #333;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  
+  /* Neon accent colors */
+  --neon-blue: #00b0ff;
+  --neon-purple: #d500f9;
+  --neon-green: #00e676;
+  --neon-pink: #ff4081;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Neon text effect for title */
+.hub-title {
+  color: var(--neon-blue);
+  text-shadow: 0 0 10px rgba(0, 176, 255, 0.7);
+}
+
+.hub-subtitle {
+  color: #aaa;
+}
+
+/* Calculator selector with neon accents */
+.calculator-type {
+  background-color: var(--calculator-bg);
+  border: 1px solid #333;
+}
+
+.calculator-type:hover {
+  box-shadow: 0 0 15px rgba(0, 176, 255, 0.5);
+}
+
+.calculator-type.active {
+  border: 2px solid var(--neon-blue);
+  box-shadow: 0 0 15px rgba(0, 176, 255, 0.5);
+}
+
+.calculator-type-icon {
+  color: var(--neon-blue);
+}
+
+/* Calculator styling */
+.calculator {
+  background-color: var(--calculator-bg);
+  border: 1px solid #333;
+}
+
+.display {
+  background-color: var(--display-bg);
+  border-bottom: 1px solid #333;
+}
+
+.current-operand {
+  color: var(--neon-green);
+}
+
+.previous-operand {
+  color: #999;
+}
+
+/* Button styling */
+button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: 1px solid #333;
+}
+
+button:hover {
+  background-color: var(--button-hover);
+}
+
+button.special {
+  background-color: var(--special-button-bg);
+  color: var(--neon-pink);
+}
+
+button.operator {
+  background-color: var(--operator-button-bg);
+  color: var(--neon-blue);
+}
+
+button.equals {
+  background-color: var(--neon-green);
+  color: #000;
+}
+
+button.function-btn {
+  color: var(--neon-purple);
+}
+
+/* History panel */
+.history-panel {
+  background-color: var(--calculator-bg);
+  border: 1px solid #333;
+}
+
+.history-header {
+  border-bottom: 1px solid #333;
+}
+
+.history-item {
+  border-bottom: 1px solid #333;
+}
+
+/* Sarcastic tips with neon accents */
+.sarcastic-tip {
+  color: var(--neon-pink);
+  font-style: italic;
+}
+
+.sarcastic-message {
+  color: var(--neon-purple);
+}
+
+/* Mode toggles */
+.mode-btn, .angle-btn, .unit-btn {
+  background-color: var(--button-bg);
+  color: var(--text-color);
+}
+
+.mode-btn.active, .angle-btn.active, .unit-btn.active {
+  background-color: var(--neon-blue);
+  color: #000;
+}
+
+/* Financial calculator styling */
+.calculator-type-btn {
+  background-color: var(--button-bg);
+  color: var(--text-color);
+}
+
+.calculator-type-btn.active {
+  background-color: var(--neon-blue);
+  color: #000;
+}
+
+.input-field {
+  background-color: var(--display-bg);
+  color: var(--text-color);
+  border: 1px solid #444;
+}
+
+.calculate-btn {
+  background-color: var(--neon-green);
+  color: #000;
+}
+
+.result-value {
+  color: var(--neon-green);
+}
+
+/* BMI Calculator styling */
+.bmi-value {
+  color: var(--neon-blue);
+}
+
+.bmi-category {
+  color: var(--neon-green);
+}
+
+/* Ad containers */
+.ad-container {
+  background-color: var(--calculator-bg);
+  border: 1px solid #333;
+}
+
+/* Neon glow effects for interactive elements */
+.calculator-type:hover .calculator-type-icon {
+  text-shadow: 0 0 10px var(--neon-blue);
+}
+
+button.equals:hover {
+  box-shadow: 0 0 15px rgba(0, 230, 118, 0.7);
+}
+
+.calculate-btn:hover {
+  box-shadow: 0 0 15px rgba(0, 230, 118, 0.7);
+}
+
+/* Dark scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #444;
+}
+
+/* Additional dark theme enhancements */
+select {
+  background-color: var(--button-bg);
+  color: var(--text-color);
+  border: 1px solid #444;
+}
+
+option {
+  background-color: var(--calculator-bg);
+  color: var(--text-color);
+}
+
+/* BMI scale colors for dark theme */
+.bmi-scale {
+  background-color: #222;
+}
+
+.scale-segment.underweight {
+  background-color: #2979FF;
+}
+
+.scale-segment.normal {
+  background-color: #00E676;
+}
+
+.scale-segment.overweight {
+  background-color: #FFAB00;
+}
+
+.scale-segment.obese {
+  background-color: #FF1744;
+}
+
+.scale-marker {
+  background-color: #fff;
+}
+
+/* Responsive dark theme adjustments */
+@media (max-width: 768px) {
+  .calculator-type.active {
+    border: 2px solid var(--neon-green);
+  }
+}
+
+@media (max-width: 480px) {
+  .hub-title {
+    font-size: 2rem;
+  }
+}
