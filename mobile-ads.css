@@ -1,0 +1,50 @@
+/* Mobile optimization for ads */
+
+/* Hide sidebar ad on mobile devices */
+@media (max-width: 768px) {
+    .sidebar-ad {
+        display: none !important;
+    }
+    
+    /* Optimize other ad placements for mobile */
+    .header-ad, .footer-ad, .result-ad {
+        max-width: 320px;
+        height: auto;
+        min-height: 50px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* Improve spacing for mobile */
+    .ad-container {
+        margin: 10px auto;
+    }
+    
+    /* Ensure calculator content has proper spacing */
+    .calculator-content {
+        padding: 0 10px;
+    }
+}
+
+/* Further optimize for very small screens */
+@media (max-width: 480px) {
+    /* Reduce ad container padding */
+    .ad-container {
+        padding: 5px;
+        margin: 8px auto;
+    }
+    
+    /* Ensure premium upgrade button is properly sized */
+    .premium-upgrade {
+        max-width: 90%;
+        font-size: 0.9rem;
+    }
+    
+    /* Adjust ad toggle position */
+    .ad-toggle {
+        bottom: 5px;
+        right: 5px;
+        width: 35px;
+        height: 35px;
+    }
+}

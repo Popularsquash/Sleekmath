@@ -1,0 +1,187 @@
+/* Financial Calculator Styles */
+
+.financial-calculator .calculator {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.financial-calculator .display {
+  height: 120px;
+}
+
+.financial-calculator .buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.financial-calculator .input-group {
+  margin-bottom: 15px;
+  background-color: var(--calculator-bg);
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.financial-calculator .input-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.financial-calculator .input-row:last-child {
+  margin-bottom: 0;
+}
+
+.financial-calculator .input-label {
+  flex: 0 0 40%;
+  color: var(--text-color);
+  font-size: 0.9rem;
+}
+
+.financial-calculator .input-field {
+  flex: 1;
+  background-color: var(--display-bg);
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  color: var(--text-color);
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.financial-calculator .input-field:focus {
+  box-shadow: 0 0 0 2px var(--financial-accent);
+}
+
+.financial-calculator .input-suffix {
+  margin-left: 10px;
+  color: var(--financial-accent);
+  font-size: 0.9rem;
+}
+
+.financial-calculator .calculate-btn {
+  background-color: var(--financial-accent);
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.financial-calculator .calculate-btn:hover {
+  background-color: #00e676;
+  transform: translateY(-2px);
+}
+
+.financial-calculator .calculate-btn:active {
+  transform: translateY(0);
+}
+
+.financial-calculator .result-container {
+  background-color: var(--calculator-bg);
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.financial-calculator .result-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.financial-calculator .result-row:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.financial-calculator .result-label {
+  color: var(--text-color);
+}
+
+.financial-calculator .result-value {
+  color: var(--financial-accent);
+  font-weight: 600;
+}
+
+.financial-calculator .calculator-type-selector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.financial-calculator .calculator-type-btn {
+  flex: 1;
+  background-color: var(--button-bg);
+  color: var(--text-color);
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.financial-calculator .calculator-type-btn:hover {
+  background-color: var(--button-hover);
+}
+
+.financial-calculator .calculator-type-btn.active {
+  background-color: var(--financial-accent);
+  color: #000;
+}
+
+.financial-calculator .sarcastic-tip {
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 10px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Responsive design for financial calculator */
+@media (max-width: 768px) {
+  .financial-calculator .calculator-type-selector {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .financial-calculator .input-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .financial-calculator .input-label {
+    margin-bottom: 5px;
+  }
+  
+  .financial-calculator .input-suffix {
+    margin-left: 0;
+    margin-top: 5px;
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .financial-calculator .result-row {
+    flex-direction: column;
+  }
+  
+  .financial-calculator .result-value {
+    margin-top: 5px;
+  }
+}

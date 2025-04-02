@@ -1,0 +1,223 @@
+/* Multi-calculator hub styles */
+
+:root {
+  /* Existing variables from original calculator */
+  --background-color: #121212;
+  --calculator-bg: #1e1e1e;
+  --display-bg: #252525;
+  --button-bg: #333333;
+  --button-hover: #444444;
+  --button-active: #555555;
+  --number-color: #ffffff;
+  --operator-color: #00ffaa;
+  --special-color: #ff5252;
+  --equals-color: #00aaff;
+  --text-color: #ffffff;
+  --shadow-color: rgba(0, 0, 0, 0.5);
+  
+  /* New variables for multi-calculator hub */
+  --hub-bg: #1a1a1a;
+  --hub-border: #333333;
+  --hub-item-bg: #252525;
+  --hub-item-hover: #333333;
+  --hub-item-active: #444444;
+  --hub-item-selected: #1e1e1e;
+  --scientific-accent: #ff9500;
+  --financial-accent: #00c853;
+  --bmi-accent: #d500f9;
+  --mortgage-accent: #2979ff;
+  --sleep-accent: #7c4dff;
+  --snow-accent: #b0bec5;
+  --calorie-accent: #f44336;
+  --ai-accent: #00bcd4;
+}
+
+.calculator-hub-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.hub-header {
+  background-color: var(--hub-bg);
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 30px var(--shadow-color);
+  text-align: center;
+}
+
+.hub-title {
+  font-size: 2rem;
+  color: var(--text-color);
+  margin: 0;
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(0, 255, 170, 0.5);
+}
+
+.hub-subtitle {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 5px;
+  font-style: italic;
+}
+
+.calculator-selector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.calculator-type {
+  background-color: var(--hub-item-bg);
+  border-radius: 10px;
+  padding: 15px;
+  cursor: pointer;
+  flex: 1 0 120px;
+  max-width: 180px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.calculator-type:hover {
+  background-color: var(--hub-item-hover);
+  transform: translateY(-5px);
+}
+
+.calculator-type.active {
+  border-color: var(--operator-color);
+  background-color: var(--hub-item-selected);
+}
+
+.calculator-type-icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.calculator-type-name {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Calculator type specific colors */
+.calculator-type.basic .calculator-type-icon {
+  color: var(--operator-color);
+}
+
+.calculator-type.scientific .calculator-type-icon {
+  color: var(--scientific-accent);
+}
+
+.calculator-type.financial .calculator-type-icon {
+  color: var(--financial-accent);
+}
+
+.calculator-type.bmi .calculator-type-icon {
+  color: var(--bmi-accent);
+}
+
+.calculator-type.mortgage .calculator-type-icon {
+  color: var(--mortgage-accent);
+}
+
+.calculator-type.sleep .calculator-type-icon {
+  color: var(--sleep-accent);
+}
+
+.calculator-type.snow .calculator-type-icon {
+  color: var(--snow-accent);
+}
+
+.calculator-type.calorie .calculator-type-icon {
+  color: var(--calorie-accent);
+}
+
+.calculator-type.ai .calculator-type-icon {
+  color: var(--ai-accent);
+}
+
+.calculator-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.calculator-container {
+  display: none;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.calculator-container.active {
+  display: flex;
+}
+
+.sarcastic-message {
+  background-color: var(--hub-bg);
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  color: var(--text-color);
+  font-style: italic;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border-left: 4px solid var(--operator-color);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .calculator-selector {
+    gap: 10px;
+  }
+  
+  .calculator-type {
+    flex: 1 0 100px;
+    max-width: 150px;
+    padding: 10px;
+  }
+  
+  .calculator-type-icon {
+    font-size: 1.5rem;
+  }
+  
+  .calculator-type-name {
+    font-size: 0.9rem;
+  }
+  
+  .hub-title {
+    font-size: 1.5rem;
+  }
+  
+  .hub-subtitle {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .calculator-selector {
+    gap: 8px;
+  }
+  
+  .calculator-type {
+    flex: 1 0 80px;
+    max-width: 120px;
+    padding: 8px;
+  }
+  
+  .calculator-type-icon {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+  
+  .calculator-type-name {
+    font-size: 0.8rem;
+  }
+}

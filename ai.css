@@ -1,0 +1,228 @@
+/* AI Calculator Styles */
+
+.ai-calculator .calculator {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.ai-calculator .input-group {
+  margin-bottom: 15px;
+  background-color: var(--calculator-bg);
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.ai-calculator .equation-input {
+  width: 100%;
+  background-color: var(--display-bg);
+  border: none;
+  border-radius: 5px;
+  padding: 12px;
+  color: var(--text-color);
+  font-size: 1.1rem;
+  outline: none;
+  transition: all 0.3s ease;
+  font-family: 'Courier New', monospace;
+  resize: vertical;
+  min-height: 100px;
+}
+
+.ai-calculator .equation-input:focus {
+  box-shadow: 0 0 0 2px var(--ai-accent);
+}
+
+.ai-calculator .input-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.ai-calculator .option-group {
+  flex: 1;
+  min-width: 200px;
+}
+
+.ai-calculator .option-label {
+  display: block;
+  color: var(--text-color);
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+.ai-calculator .option-select {
+  width: 100%;
+  background-color: var(--display-bg);
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  color: var(--text-color);
+  font-size: 0.9rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.ai-calculator .option-select:focus {
+  box-shadow: 0 0 0 2px var(--ai-accent);
+}
+
+.ai-calculator .calculate-btn {
+  background-color: var(--ai-accent);
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.ai-calculator .calculate-btn:hover {
+  background-color: #9c64ff;
+  transform: translateY(-2px);
+}
+
+.ai-calculator .calculate-btn:active {
+  transform: translateY(0);
+}
+
+.ai-calculator .calculate-btn i {
+  font-size: 1.2rem;
+}
+
+.ai-calculator .result-container {
+  background-color: var(--calculator-bg);
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.ai-calculator .result-title {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ai-calculator .result-title i {
+  color: var(--ai-accent);
+}
+
+.ai-calculator .loading-indicator {
+  display: none;
+  text-align: center;
+  padding: 20px;
+}
+
+.ai-calculator .loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top: 4px solid var(--ai-accent);
+  animation: spin 1s linear infinite;
+  margin: 0 auto 15px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.ai-calculator .result-content {
+  background-color: var(--display-bg);
+  border-radius: 5px;
+  padding: 15px;
+  color: var(--text-color);
+  font-family: 'Courier New', monospace;
+  white-space: pre-wrap;
+  overflow-x: auto;
+  line-height: 1.5;
+}
+
+.ai-calculator .step-by-step {
+  margin-top: 20px;
+}
+
+.ai-calculator .step {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ai-calculator .step:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.ai-calculator .step-number {
+  font-weight: 600;
+  color: var(--ai-accent);
+  margin-bottom: 5px;
+}
+
+.ai-calculator .step-content {
+  padding-left: 15px;
+}
+
+.ai-calculator .sarcastic-tip {
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 15px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.ai-calculator .examples-container {
+  margin-top: 15px;
+}
+
+.ai-calculator .examples-title {
+  font-size: 0.9rem;
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+.ai-calculator .examples-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ai-calculator .example-item {
+  background-color: var(--button-bg);
+  border-radius: 5px;
+  padding: 8px 12px;
+  font-size: 0.8rem;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ai-calculator .example-item:hover {
+  background-color: var(--button-hover);
+}
+
+/* Responsive design for AI calculator */
+@media (max-width: 768px) {
+  .ai-calculator .input-options {
+    flex-direction: column;
+  }
+  
+  .ai-calculator .option-group {
+    width: 100%;
+  }
+}

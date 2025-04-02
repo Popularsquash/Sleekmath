@@ -1,0 +1,155 @@
+/* Scientific Calculator Styles */
+
+.scientific-calculator .calculator {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.scientific-calculator .display {
+  height: 120px;
+}
+
+.scientific-calculator .buttons {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+}
+
+.scientific-calculator .zero {
+  grid-column: span 1;
+}
+
+.scientific-calculator .function-btn {
+  background-color: var(--button-bg);
+  color: var(--scientific-accent);
+  font-weight: 500;
+}
+
+.scientific-calculator .function-btn:hover {
+  background-color: var(--button-hover);
+}
+
+.scientific-calculator .function-btn:active {
+  background-color: var(--button-active);
+}
+
+.scientific-calculator .memory-btn {
+  background-color: var(--button-bg);
+  color: #64b5f6;
+  font-weight: 500;
+}
+
+.scientific-calculator .memory-btn:hover {
+  background-color: var(--button-hover);
+}
+
+.scientific-calculator .memory-btn:active {
+  background-color: var(--button-active);
+}
+
+.scientific-calculator .constant-btn {
+  background-color: var(--button-bg);
+  color: #ba68c8;
+  font-weight: 500;
+}
+
+.scientific-calculator .constant-btn:hover {
+  background-color: var(--button-hover);
+}
+
+.scientific-calculator .constant-btn:active {
+  background-color: var(--button-active);
+}
+
+.scientific-calculator .mode-toggle {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  background-color: var(--calculator-bg);
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.scientific-calculator .mode-btn {
+  flex: 1;
+  padding: 8px;
+  text-align: center;
+  border-radius: 8px;
+  background-color: transparent;
+  color: var(--text-color);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.scientific-calculator .mode-btn.active {
+  background-color: var(--button-bg);
+  color: var(--scientific-accent);
+}
+
+.scientific-calculator .angle-toggle {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  background-color: var(--calculator-bg);
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.scientific-calculator .angle-btn {
+  flex: 1;
+  padding: 8px;
+  text-align: center;
+  border-radius: 8px;
+  background-color: transparent;
+  color: var(--text-color);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.scientific-calculator .angle-btn.active {
+  background-color: var(--button-bg);
+  color: var(--scientific-accent);
+}
+
+/* Responsive design for scientific calculator */
+@media (max-width: 768px) {
+  .scientific-calculator .buttons {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .scientific-calculator .mode-toggle,
+  .scientific-calculator .angle-toggle {
+    flex-wrap: wrap;
+  }
+  
+  .scientific-calculator .mode-btn,
+  .scientific-calculator .angle-btn {
+    flex: 1 0 30%;
+    margin: 2px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .scientific-calculator .buttons {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+  }
+  
+  .scientific-calculator .button {
+    font-size: 0.9rem;
+    padding: 10px 5px;
+  }
+  
+  .scientific-calculator .mode-btn,
+  .scientific-calculator .angle-btn {
+    flex: 1 0 45%;
+    font-size: 0.8rem;
+    padding: 6px 4px;
+  }
+}
