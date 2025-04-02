@@ -1,139 +1,47 @@
-/* AdSense Styling and Optimization */
-
-/* Ad container styling */
+/* Ad styling */
 .ad-container {
-  display: block;
-  text-align: center;
-  padding: 10px;
-  margin: 15px auto;
-  background-color: rgba(30, 30, 30, 0.6);
+  background-color: #1a1a1a;
   border-radius: 8px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9rem;
   overflow: hidden;
-  clear: both;
-  max-width: 100%;
 }
 
-/* Header ad styling */
 .header-ad {
   width: 100%;
-  max-width: 728px;
   height: 90px;
   margin-bottom: 20px;
 }
 
-/* Sidebar ad styling */
 .sidebar-ad {
   width: 300px;
   height: 250px;
-  float: right;
-  margin: 0 0 15px 15px;
-  display: none; /* Hide sidebar ad by default */
+  margin-left: 20px;
 }
 
-/* Only show sidebar ad on large screens */
-@media (min-width: 1200px) {
-  .sidebar-ad {
-    display: block;
-  }
-}
-
-/* Result ad styling */
 .result-ad {
   width: 100%;
-  max-width: 728px;
-  min-height: 90px;
-  margin: 20px auto;
+  height: 100px;
+  margin: 20px 0;
 }
 
-/* Footer ad styling */
 .footer-ad {
   width: 100%;
-  max-width: 728px;
   height: 90px;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
-/* Responsive ad adjustments */
-@media (max-width: 768px) {
-  .header-ad, .footer-ad, .result-ad {
-    max-width: 320px;
-    height: auto;
-    min-height: 50px;
-  }
-  
-  .sidebar-ad {
-    float: none;
-    margin: 15px auto;
-    width: 300px;
-    height: 250px;
-  }
-}
-
-/* Ad exclusion zones - prevent ads from appearing in these areas */
-.calculator .buttons .adsbygoogle,
-.input-field .adsbygoogle,
-.input-select .adsbygoogle,
-.calculate-btn .adsbygoogle {
-  display: none !important;
-}
-
-/* Premium user styling (no ads) */
-body.premium-user .ad-container {
-  display: none !important;
-}
-
-/* Ad loading animation */
-.ad-container::before {
-  content: "Ad";
-  display: block;
-  color: rgba(255, 255, 255, 0.3);
-  font-size: 12px;
-  text-align: center;
-  padding: 2px;
-}
-
-/* Ad placement optimization */
-.calculator-container {
-  position: relative;
-}
-
-/* Optimize ad placement for different calculator types */
-.basic-calculator .result-ad {
-  margin-top: 30px;
-}
-
-.scientific-calculator .result-ad {
-  margin-top: 40px;
-}
-
-.humorous-calculator .result-ad {
-  margin-top: 25px;
-}
-
-/* Lazy loading for ads */
-.ad-container.lazy-load {
-  min-height: 50px;
-  background-image: linear-gradient(to right, rgba(30, 30, 30, 0.6) 0%, rgba(40, 40, 40, 0.6) 50%, rgba(30, 30, 30, 0.6) 100%);
-  background-size: 200% 100%;
-  animation: loading 1.5s ease-in-out infinite;
-}
-
-@keyframes loading {
-  0% {
-    background-position: 200% 0;
-  }
-  100% {
-    background-position: -200% 0;
-  }
-}
-
-/* Ad visibility toggle button */
-.ad-toggle {
+/* Toggle ads button */
+.toggle-ads {
   position: fixed;
-  bottom: 10px;
-  right: 10px;
-  background-color: var(--accent-color);
-  color: #000;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
   border: none;
   border-radius: 50%;
   width: 40px;
@@ -143,54 +51,82 @@ body.premium-user .ad-container {
   align-items: center;
   cursor: pointer;
   z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-.ad-toggle:hover {
+.toggle-ads:hover {
+  background-color: var(--primary-color);
   transform: scale(1.1);
-  background-color: var(--accent-hover);
 }
 
-.ad-toggle i {
-  font-size: 18px;
+.toggle-ads i {
+  font-size: 1.2rem;
 }
 
-/* Premium upgrade button */
+/* Premium upgrade section */
 .premium-upgrade {
-  display: block;
-  background-color: var(--accent-color);
-  color: #000;
-  text-align: center;
-  padding: 10px;
-  margin: 20px auto;
+  background-color: rgba(41, 121, 255, 0.1);
   border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  max-width: 300px;
+  padding: 15px;
+  margin-top: 30px;
+  text-align: center;
+  border: 1px solid var(--secondary-color);
 }
 
-.premium-upgrade:hover {
-  background-color: var(--accent-hover);
+.premium-upgrade h3 {
+  color: var(--secondary-color);
+  margin-top: 0;
+}
+
+.premium-upgrade p {
+  margin-bottom: 15px;
+}
+
+.premium-button {
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.premium-button:hover {
+  background-color: #1565c0;
   transform: translateY(-2px);
 }
 
-/* Ad notice styling */
-.ad-notice {
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.5);
-  text-align: center;
-  margin: 5px 0;
+/* Hide ads when premium mode is active */
+.premium-mode .ad-container {
+  display: none;
 }
 
-/* Ensure ads don't interfere with calculator functionality */
-.calculator-content {
-  position: relative;
-  z-index: 10;
+/* Media queries */
+@media (max-width: 1200px) {
+  .sidebar-ad {
+    display: none;
+  }
 }
 
-.ad-container {
-  position: relative;
-  z-index: 5;
+@media (max-width: 768px) {
+  .header-ad, .footer-ad {
+    height: 60px;
+  }
+  
+  .result-ad {
+    height: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-ad, .footer-ad {
+    height: 50px;
+  }
+  
+  .result-ad {
+    height: 60px;
+  }
 }
