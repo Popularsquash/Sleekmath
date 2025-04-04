@@ -1,0 +1,242 @@
+/* Enhanced responsive styles for the Sleekmath calculator application */
+
+/* Base responsive variables */
+:root {
+  --mobile-button-size: 44px;
+  --mobile-font-size: 14px;
+  --mobile-padding: 10px;
+  --mobile-border-radius: 8px;
+  --tablet-padding: 15px;
+}
+
+/* Tablet Styles (768px and below) */
+@media (max-width: 768px) {
+  .calculator-hub-container {
+    padding: var(--tablet-padding);
+  }
+  
+  .calculator-content {
+    flex-direction: column;
+  }
+  
+  .calculator-selector {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .calculator-type {
+    width: 80px;
+    padding: 12px;
+  }
+  
+  .scientific-buttons {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .function-btn {
+    font-size: 0.9rem;
+  }
+  
+  .sidebar-ad {
+    flex: 1 1 100%;
+    min-height: 250px;
+    margin-top: 20px;
+  }
+  
+  /* Improve calculator display on tablets */
+  .current-operand {
+    font-size: 2.2rem;
+  }
+  
+  /* Add button press animation */
+  button {
+    transition: transform 0.1s, background-color 0.2s;
+  }
+  
+  button:active {
+    transform: scale(0.95);
+    background-color: var(--button-hover);
+  }
+}
+
+/* Mobile Styles (480px and below) */
+@media (max-width: 480px) {
+  .hub-title {
+    font-size: 2rem;
+  }
+  
+  .hub-subtitle {
+    font-size: 1rem;
+  }
+  
+  .calculator-type {
+    width: 60px;
+    padding: var(--mobile-padding);
+  }
+  
+  .calculator-type-icon {
+    font-size: 18px;
+  }
+  
+  .calculator-type-name {
+    font-size: 12px;
+  }
+  
+  .current-operand {
+    font-size: 1.8rem;
+  }
+  
+  button {
+    padding: 12px;
+    font-size: 1rem;
+    min-height: var(--mobile-button-size);
+    min-width: var(--mobile-button-size);
+  }
+  
+  /* Improve touch targets */
+  .calculator-type, button, .mode-btn, .angle-btn, .unit-btn {
+    min-height: var(--mobile-button-size);
+    min-width: var(--mobile-button-size);
+  }
+  
+  /* Optimize calculator layout */
+  .calculator-content {
+    gap: 10px;
+  }
+  
+  .history-panel {
+    flex: 1 1 100%;
+  }
+  
+  /* Ensure calculator fits on small screens */
+  .calculator {
+    width: 100%;
+  }
+}
+
+/* Very Small Screens (360px and below) */
+@media (max-width: 360px) {
+  .calculator-hub-container {
+    padding: 10px;
+  }
+  
+  .calculator-selector {
+    gap: 8px;
+  }
+  
+  .calculator-type {
+    width: 50px;
+    padding: 8px;
+  }
+  
+  .calculator-type-icon {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .calculator-type-name {
+    font-size: 10px;
+  }
+  
+  /* Stack calculator buttons for very small screens */
+  .buttons {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  button {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+  
+  .current-operand {
+    font-size: 1.5rem;
+  }
+  
+  /* Adjust scientific calculator for very small screens */
+  .scientific-buttons {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Landscape orientation optimizations */
+@media (max-height: 500px) and (orientation: landscape) {
+  .calculator-hub-container {
+    padding: 10px;
+  }
+  
+  .hub-header {
+    margin-bottom: 15px;
+  }
+  
+  .hub-title {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+  }
+  
+  .calculator-selector {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+  
+  .calculator-type {
+    flex: 0 0 auto;
+  }
+  
+  .calculator-content {
+    flex-direction: row;
+  }
+  
+  .buttons {
+    gap: 2px;
+  }
+  
+  button {
+    padding: 10px;
+  }
+}
+
+/* Copy button styles */
+.copy-result-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: transparent;
+  border: none;
+  color: var(--text-color);
+  opacity: 0.6;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  font-size: 1rem;
+  padding: 5px;
+}
+
+.copy-result-btn:hover {
+  opacity: 1;
+}
+
+.display {
+  position: relative;
+}
+
+/* Button press animation for all screen sizes */
+button {
+  transition: transform 0.1s, background-color 0.2s;
+}
+
+button:active {
+  transform: scale(0.95);
+  background-color: var(--button-hover);
+}
+
+/* Focus states for accessibility */
+button:focus, 
+.calculator-type:focus,
+.mode-btn:focus, 
+.angle-btn:focus, 
+.unit-btn:focus {
+  outline: 2px solid var(--equals-button-bg);
+  outline-offset: 2px;
+}

@@ -1,0 +1,72 @@
+/* Footer styles for the Sleekmath calculator application */
+
+.footer {
+  margin-top: 40px;
+  padding: 20px 0;
+  background-color: var(--calculator-bg);
+  border-top: 1px solid var(--border-color);
+  color: var(--text-color);
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-link {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.2s;
+  font-size: 0.9rem;
+}
+
+.footer-link:hover {
+  color: var(--equals-button-bg);
+  text-decoration: underline;
+}
+
+.footer-copyright {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Responsive footer styles */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .footer-links {
+    justify-content: center;
+  }
+}
+
+/* Dark theme specific footer styles */
+.dark-theme .footer {
+  background-color: #1e1e1e;
+  border-top-color: #333;
+}
+
+.dark-theme .footer-link {
+  color: #ccc;
+}
+
+.dark-theme .footer-link:hover {
+  color: #00bcd4;
+}
+
+.dark-theme .footer-copyright {
+  color: #999;
+}

@@ -1,0 +1,286 @@
+/* AdSense optimization styles for the Sleekmath calculator application */
+
+/* Responsive ad containers */
+.ad-container {
+  background-color: var(--calculator-bg);
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  margin-bottom: 20px;
+  overflow: hidden;
+  position: relative;
+  transition: height 0.3s ease;
+}
+
+.header-ad {
+  min-height: 90px;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar-ad {
+  min-height: 600px;
+  flex: 0 0 300px;
+}
+
+/* Ad label styling */
+.ad-label {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  font-size: 0.7rem;
+  color: #777;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 2px 5px;
+  border-radius: 3px;
+  z-index: 1;
+}
+
+/* Premium toggle for ad-free experience */
+.premium-toggle-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 0 20px;
+}
+
+.premium-toggle-label {
+  margin-right: 10px;
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+.premium-toggle {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.premium-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.premium-toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 24px;
+}
+
+.premium-toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .premium-toggle-slider {
+  background-color: var(--equals-button-bg);
+}
+
+input:checked + .premium-toggle-slider:before {
+  transform: translateX(26px);
+}
+
+/* Premium badge */
+.premium-badge {
+  display: inline-block;
+  background-color: gold;
+  color: #333;
+  font-size: 0.7rem;
+  font-weight: bold;
+  padding: 2px 5px;
+  border-radius: 3px;
+  margin-left: 5px;
+  text-transform: uppercase;
+}
+
+/* Responsive ad layouts */
+@media (max-width: 768px) {
+  .sidebar-ad {
+    flex: 1 1 100%;
+    min-height: 250px;
+  }
+  
+  .header-ad {
+    min-height: 50px;
+  }
+  
+  .premium-toggle-container {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .ad-container {
+    padding: 10px;
+  }
+  
+  .header-ad {
+    min-height: 50px;
+  }
+  
+  .sidebar-ad {
+    min-height: 250px;
+  }
+}
+
+/* Mobile-specific ad styles */
+.mobile-ad {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-ad {
+    display: block;
+    min-height: 100px;
+    margin: 20px 0;
+  }
+}
+
+/* Dark theme specific ad styles */
+.dark-theme .ad-label {
+  background-color: rgba(30, 30, 30, 0.7);
+  color: #aaa;
+}
+
+.dark-theme .premium-toggle-slider {
+  background-color: #555;
+}
+
+.dark-theme .premium-badge {
+  background-color: #ffd700;
+  color: #222;
+}
+
+/* Ad-free mode styles */
+.ad-free-mode .ad-container {
+  display: none;
+}
+
+.ad-free-mode .calculator-content {
+  gap: 0;
+}
+
+.ad-free-mode .premium-badge {
+  display: inline-block;
+}
+
+/* Interstitial ad styles */
+.interstitial-ad {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.interstitial-ad-content {
+  background-color: var(--calculator-bg);
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+}
+
+.interstitial-ad-close {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: var(--equals-button-bg);
+  color: var(--equals-button-text);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.interstitial-ad-close:hover {
+  background-color: #3d8b40;
+}
+
+.interstitial-ad-timer {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+/* Premium features promotion */
+.premium-promo {
+  background-color: var(--calculator-bg);
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid var(--equals-button-bg);
+}
+
+.premium-promo-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.premium-promo-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--text-color);
+}
+
+.premium-promo-badge {
+  background-color: gold;
+  color: #333;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 3px 8px;
+  border-radius: 3px;
+  margin-left: 10px;
+  text-transform: uppercase;
+}
+
+.premium-promo-features {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+.premium-promo-feature {
+  margin-bottom: 5px;
+  color: var(--text-color);
+}
+
+.premium-promo-button {
+  background-color: var(--equals-button-bg);
+  color: var(--equals-button-text);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: 600;
+}
+
+.premium-promo-button:hover {
+  background-color: #3d8b40;
+}

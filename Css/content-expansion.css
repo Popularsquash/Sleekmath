@@ -1,0 +1,118 @@
+/* Styles for content expansion features */
+
+/* Share button styles */
+.share-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  background-color: var(--equals-button-bg);
+  color: var(--equals-button-text);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  z-index: 10;
+  transition: background-color 0.2s;
+}
+
+.share-button:hover {
+  background-color: #3d8b40;
+}
+
+/* Social share buttons */
+.social-share-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #fff;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s;
+}
+
+.social-share-button:hover {
+  transform: scale(1.1);
+}
+
+/* Suggestion button styles */
+.suggestion-button {
+  background-color: var(--calculator-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin: 20px auto;
+  display: block;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.suggestion-button:hover {
+  background-color: var(--button-hover);
+  transform: translateY(-2px);
+}
+
+/* Sarcastic message animation */
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(-10px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(10px); }
+}
+
+.sarcastic-message-animated {
+  animation: fadeInOut 30s ease-in-out;
+}
+
+/* Dark theme specific styles */
+.dark-theme .share-button {
+  background-color: #00bcd4;
+}
+
+.dark-theme .share-button:hover {
+  background-color: #0097a7;
+}
+
+.dark-theme .suggestion-button {
+  border-color: #444;
+}
+
+.dark-theme .suggestion-button:hover {
+  background-color: #333;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .share-button {
+    top: 5px;
+    right: 5px;
+    padding: 4px 8px;
+    font-size: 0.8rem;
+  }
+  
+  .social-share-button {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .share-button {
+    position: static;
+    margin: 10px auto;
+    display: block;
+  }
+  
+  .social-share-button {
+    width: 30px;
+    height: 30px;
+    font-size: 0.9rem;
+  }
+}
