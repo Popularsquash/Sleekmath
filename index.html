@@ -3,118 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multi-Calculator Hub</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Calculator Improvements Test</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/dark-theme.css">
-    <!-- AdSense Verification Code -->
-    <meta name="google-adsense-account" content="ca-pub-7017172351327345">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7017172351327345" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../enhanced-responsive.css">
+    <link rel="stylesheet" href="../footer.css">
+    <link rel="stylesheet" href="../interface-enhancements.css">
+    <link rel="stylesheet" href="../adsense-optimization.css">
+    <link rel="stylesheet" href="../content-expansion.css">
 </head>
-<body>
+<body class="dark-theme">
     <div class="calculator-hub-container">
-        <!-- Header Ad Container -->
-        <div id="calculator-header-ad" class="ad-container header-ad lazy-load"></div>
-        
         <div class="hub-header">
-            <h1 class="hub-title">Sleek Multi-Calculator</h1>
-            <p class="hub-subtitle">Because one calculator wasn't pretentious enough</p>
-        </div>
-
-        <div class="sarcastic-message" id="sarcasticMessage">
-            Welcome to the calculator that judges your math skills silently.
+            <h1 class="hub-title">Multi-Calculator Hub</h1>
+            <h2 class="hub-subtitle">Because one calculator wasn't pretentious enough</h2>
+            <p id="sarcasticMessage" class="sarcastic-message">Welcome to the calculator that judges your math skills silently.</p>
         </div>
 
         <div class="calculator-selector">
-            <div class="calculator-type basic active" data-calculator="basic">
-                <div class="calculator-type-icon">
-                    <i class="fas fa-calculator"></i>
-                </div>
-                <div class="calculator-type-name">Basic</div>
+            <div class="calculator-type active" data-calculator="basic">
+                <i class="calculator-type-icon fas fa-calculator"></i>
+                <span class="calculator-type-name">Basic</span>
             </div>
-            <div class="calculator-type scientific" data-calculator="scientific">
-                <div class="calculator-type-icon">
-                    <i class="fas fa-square-root-alt"></i>
-                </div>
-                <div class="calculator-type-name">Scientific</div>
+            <div class="calculator-type" data-calculator="scientific">
+                <i class="calculator-type-icon fas fa-square-root-alt"></i>
+                <span class="calculator-type-name">Scientific</span>
             </div>
-            <div class="calculator-type financial" data-calculator="financial">
-                <div class="calculator-type-icon">
-                    <i class="fas fa-dollar-sign"></i>
-                </div>
-                <div class="calculator-type-name">Financial</div>
+            <div class="calculator-type" data-calculator="financial">
+                <i class="calculator-type-icon fas fa-dollar-sign"></i>
+                <span class="calculator-type-name">Financial</span>
             </div>
-            <div class="calculator-type bmi" data-calculator="bmi">
-                <div class="calculator-type-icon">
-                    <i class="fas fa-weight"></i>
-                </div>
-                <div class="calculator-type-name">BMI</div>
+            <div class="calculator-type" data-calculator="bmi">
+                <i class="calculator-type-icon fas fa-weight"></i>
+                <span class="calculator-type-name">BMI</span>
             </div>
-            <div class="calculator-type mortgage" data-calculator="mortgage">
-                <div class="calculator-type-icon">
-                    <i class="fas fa-home"></i>
-                </div>
-                <div class="calculator-type-name">Mortgage</div>
+            <div class="calculator-type" data-calculator="mortgage">
+                <i class="calculator-type-icon fas fa-home"></i>
+                <span class="calculator-type-name">Mortgage</span>
             </div>
-            <div class="calculator-type sleep" data-calculator="sleep">
-                <div class="calculator-type-icon">
-                    <i class="fas fa-bed"></i>
-                </div>
-                <div class="calculator-type-name">REM Sleep</div>
+            <div class="calculator-type" data-calculator="sleep">
+                <i class="calculator-type-icon fas fa-bed"></i>
+                <span class="calculator-type-name">REM Sleep</span>
             </div>
-            <div class="calculator-type snow" data-calculator="snow">
-                <div class="calculator-type-icon">
-                    <i class="fas fa-snowflake"></i>
-                </div>
-                <div class="calculator-type-name">Snow Days</div>
+            <div class="calculator-type" data-calculator="snow">
+                <i class="calculator-type-icon fas fa-snowflake"></i>
+                <span class="calculator-type-name">Snow Days</span>
             </div>
-            <div class="calculator-type calorie" data-calculator="calorie">
-                <div class="calculator-type-icon">
-                    <i class="fas fa-utensils"></i>
-                </div>
-                <div class="calculator-type-name">Calorie</div>
+            <div class="calculator-type" data-calculator="calorie">
+                <i class="calculator-type-icon fas fa-utensils"></i>
+                <span class="calculator-type-name">Calorie</span>
             </div>
-            <div class="calculator-type ai" data-calculator="ai">
-                <div class="calculator-type-icon">
-                    <i class="fas fa-robot"></i>
-                </div>
-                <div class="calculator-type-name">AI Solver</div>
+            <div class="calculator-type" data-calculator="ai">
+                <i class="calculator-type-icon fas fa-robot"></i>
+                <span class="calculator-type-name">AI Solver</span>
             </div>
-            <div class="calculator-type dating" data-calculator="dating">
-                <div class="calculator-type-icon">
-                    <i class="fas fa-heart"></i>
-                </div>
-                <div class="calculator-type-name">Dating</div>
+            <div class="calculator-type" data-calculator="dating">
+                <i class="calculator-type-icon fas fa-heart"></i>
+                <span class="calculator-type-name">Dating</span>
             </div>
-            <div class="calculator-type excuse" data-calculator="excuse">
-                <div class="calculator-type-icon">
-                    <i class="fas fa-comment-dots"></i>
-                </div>
-                <div class="calculator-type-name">Excuse</div>
+            <div class="calculator-type" data-calculator="excuse">
+                <i class="calculator-type-icon fas fa-comment"></i>
+                <span class="calculator-type-name">Excuse</span>
             </div>
-            <div class="calculator-type procrastination" data-calculator="procrastination">
-                <div class="calculator-type-icon">
-                    <i class="fas fa-hourglass-half"></i>
-                </div>
-                <div class="calculator-type-name">Procrastination</div>
+            <div class="calculator-type" data-calculator="procrastination">
+                <i class="calculator-type-icon fas fa-hourglass-half"></i>
+                <span class="calculator-type-name">Procrastination</span>
             </div>
-            <div class="calculator-type meeting" data-calculator="meeting">
-                <div class="calculator-type-icon">
-                    <i class="fas fa-users"></i>
-                </div>
-                <div class="calculator-type-name">Meeting</div>
+            <div class="calculator-type" data-calculator="meeting">
+                <i class="calculator-type-icon fas fa-users"></i>
+                <span class="calculator-type-name">Meeting</span>
             </div>
         </div>
 
         <div class="calculator-content">
-            <!-- Sidebar Ad Container -->
-            <div id="calculator-sidebar-ad" class="ad-container sidebar-ad lazy-load"></div>
-            
-            <!-- Basic Calculator (already implemented) -->
-            <div class="calculator-container basic-calculator active" id="basicCalculator">
+            <div class="ad-container sidebar-ad">
+                <div style="height: 100%; display: flex; justify-content: center; align-items: center; color: #777;">
+                    Advertisement
+                </div>
+            </div>
+
+            <div id="basicCalculator" class="calculator-container active">
                 <div class="calculator">
                     <div class="display">
                         <div class="previous-operand"></div>
@@ -123,80 +92,300 @@
                     <div class="buttons">
                         <button class="special" data-action="clear">AC</button>
                         <button class="special" data-action="delete">DEL</button>
-                        <button class="operator" data-action="percent">%</button>
-                        <button class="operator" data-action="divide">÷</button>
-                        
-                        <button class="number" data-value="7">7</button>
-                        <button class="number" data-value="8">8</button>
-                        <button class="number" data-value="9">9</button>
-                        <button class="operator" data-action="multiply">×</button>
-                        
-                        <button class="number" data-value="4">4</button>
-                        <button class="number" data-value="5">5</button>
-                        <button class="number" data-value="6">6</button>
-                        <button class="operator" data-action="subtract">−</button>
-                        
-                        <button class="number" data-value="1">1</button>
-                        <button class="number" data-value="2">2</button>
-                        <button class="number" data-value="3">3</button>
-                        <button class="operator" data-action="add">+</button>
-                        
-                        <button class="number zero" data-value="0">0</button>
-                        <button class="number" data-action="decimal">.</button>
-                        <button class="equals" data-action="calculate">=</button>
-                    </div>
-                </div>
-                
-                <div class="history-panel">
-                    <div class="history-header">
-                        <h3>Calculation History</h3>
-                        <button class="history-clear" id="clearHistory">Clear</button>
-                    </div>
-                    <div class="history-list" id="historyList">
-                        <!-- History entries will be added here dynamically -->
+                        <button class="special" data-action="percent">%</button>
+                        <button class="operator">÷</button>
+                        <button class="number">7</button>
+                        <button class="number">8</button>
+                        <button class="number">9</button>
+                        <button class="operator">×</button>
+                        <button class="number">4</button>
+                        <button class="number">5</button>
+                        <button class="number">6</button>
+                        <button class="operator">−</button>
+                        <button class="number">1</button>
+                        <button class="number">2</button>
+                        <button class="number">3</button>
+                        <button class="operator">+</button>
+                        <button class="number zero">0</button>
+                        <button class="decimal" data-action="decimal">.</button>
+                        <button class="equals">=</button>
                     </div>
                 </div>
             </div>
 
-            <!-- Scientific Calculator -->
-            <div class="calculator-container scientific-calculator" id="scientificCalculator">
-                <!-- Scientific calculator content -->
-                <!-- Content preserved from original file -->
+            <div class="history-panel">
+                <div class="history-header">
+                    <h3>Calculation History</h3>
+                    <button class="history-clear">Clear</button>
+                </div>
+                <div id="historyList" class="history-list">
+                    <!-- History items will be added here -->
+                </div>
             </div>
-
-            <!-- Financial Calculator -->
-            <div class="calculator-container financial-calculator" id="financialCalculator">
-                <!-- Financial calculator content -->
-                <!-- Content preserved from original file -->
-            </div>
-
-            <!-- BMI Calculator -->
-            <div class="calculator-container bmi-calculator" id="bmiCalculator">
-                <!-- BMI calculator content -->
-                <!-- Content preserved from original file -->
-            </div>
-
-            <!-- Other calculator sections -->
-            <!-- Content preserved from original file -->
         </div>
     </div>
 
-    <!-- JavaScript Files -->
-    <script src="js/history.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/scientific.js"></script>
-    <script src="js/financial.js"></script>
-    <script src="js/bmi.js"></script>
-    <script src="js/mortgage.js"></script>
-    <script src="js/sleep.js"></script>
-    <script src="js/snow.js"></script>
-    <script src="js/calorie.js"></script>
-    <script src="js/ai.js"></script>
-    <script src="js/dating.js"></script>
-    <script src="js/excuse.js"></script>
-    <script src="js/procrastination.js"></script>
-    <script src="js/meeting.js"></script>
-    <script src="js/adsense.js"></script>
-    <script src="js/hub.js"></script>
+    <script src="../footer.js"></script>
+    <script src="../interface-enhancements.js"></script>
+    <script src="../adsense-optimization.js"></script>
+    <script src="../content-expansion.js"></script>
+    <script>
+        // Basic Calculator Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Calculator state
+            let currentOperand = '0';
+            let previousOperand = '';
+            let operation = undefined;
+            let shouldResetScreen = false;
+
+            // DOM elements
+            const currentOperandDisplay = document.querySelector('.current-operand');
+            const previousOperandDisplay = document.querySelector('.previous-operand');
+            const numberButtons = document.querySelectorAll('.number');
+            const operationButtons = document.querySelectorAll('.operator');
+            const equalsButton = document.querySelector('.equals');
+            const clearButton = document.querySelector('[data-action="clear"]');
+            const deleteButton = document.querySelector('[data-action="delete"]');
+            const decimalButton = document.querySelector('[data-action="decimal"]');
+            const percentButton = document.querySelector('[data-action="percent"]');
+            const historyList = document.getElementById('historyList');
+            const historyClearButton = document.querySelector('.history-clear');
+
+            // Initialize display
+            updateDisplay();
+
+            // Add event listeners to buttons
+            numberButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    inputNumber(button.innerText);
+                });
+            });
+
+            operationButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    chooseOperation(button.innerText);
+                });
+            });
+
+            equalsButton.addEventListener('click', () => {
+                calculate();
+            });
+
+            clearButton.addEventListener('click', () => {
+                clear();
+            });
+
+            deleteButton.addEventListener('click', () => {
+                deleteNumber();
+            });
+
+            decimalButton.addEventListener('click', () => {
+                inputDecimal();
+            });
+
+            percentButton.addEventListener('click', () => {
+                percent();
+            });
+
+            historyClearButton.addEventListener('click', () => {
+                clearHistory();
+            });
+
+            // Add keyboard support
+            document.addEventListener('keydown', handleKeyboardInput);
+
+            function handleKeyboardInput(e) {
+                if (e.key >= '0' && e.key <= '9') inputNumber(e.key);
+                if (e.key === '.') inputDecimal();
+                if (e.key === '=' || e.key === 'Enter') calculate();
+                if (e.key === 'Backspace') deleteNumber();
+                if (e.key === 'Escape') clear();
+                if (e.key === '+' || e.key === '-' || e.key === '*' || e.key === '/') {
+                    const opMap = {
+                        '+': '+',
+                        '-': '−',
+                        '*': '×',
+                        '/': '÷'
+                    };
+                    chooseOperation(opMap[e.key]);
+                }
+            }
+
+            function inputNumber(number) {
+                if (shouldResetScreen) {
+                    currentOperand = '';
+                    shouldResetScreen = false;
+                }
+                if (currentOperand === '0' && number !== '0') {
+                    currentOperand = number;
+                } else if (currentOperand !== '0') {
+                    currentOperand += number;
+                }
+                updateDisplay();
+            }
+
+            function inputDecimal() {
+                if (shouldResetScreen) {
+                    currentOperand = '0';
+                    shouldResetScreen = false;
+                }
+                if (!currentOperand.includes('.')) {
+                    currentOperand += '.';
+                }
+                updateDisplay();
+            }
+
+            function chooseOperation(op) {
+                if (currentOperand === '') return;
+                if (previousOperand !== '') {
+                    calculate();
+                }
+                operation = op;
+                previousOperand = currentOperand;
+                currentOperand = '';
+                updateDisplay();
+            }
+
+            function calculate() {
+                let computation;
+                const prev = parseFloat(previousOperand);
+                const current = parseFloat(currentOperand);
+                if (isNaN(prev) || isNaN(current)) return;
+                switch (operation) {
+                    case '+':
+                        computation = prev + current;
+                        break;
+                    case '−':
+                        computation = prev - current;
+                        break;
+                    case '×':
+                        computation = prev * current;
+                        break;
+                    case '÷':
+                        computation = prev / current;
+                        break;
+                    default:
+                        return;
+                }
+                
+                // Add to history
+                addToHistory(`${previousOperand} ${operation} ${currentOperand} = ${computation}`);
+                
+                currentOperand = computation.toString();
+                operation = undefined;
+                previousOperand = '';
+                shouldResetScreen = true;
+                updateDisplay();
+            }
+
+            function percent() {
+                if (currentOperand === '') return;
+                currentOperand = (parseFloat(currentOperand) / 100).toString();
+                updateDisplay();
+            }
+
+            function clear() {
+                currentOperand = '0';
+                previousOperand = '';
+                operation = undefined;
+                shouldResetScreen = false;
+                updateDisplay();
+            }
+
+            function deleteNumber() {
+                if (shouldResetScreen) {
+                    clear();
+                    return;
+                }
+                if (currentOperand.length === 1) {
+                    currentOperand = '0';
+                } else {
+                    currentOperand = currentOperand.slice(0, -1);
+                }
+                updateDisplay();
+            }
+
+            function updateDisplay() {
+                currentOperandDisplay.innerText = currentOperand;
+                if (operation) {
+                    previousOperandDisplay.innerText = `${previousOperand} ${operation}`;
+                } else {
+                    previousOperandDisplay.innerText = previousOperand;
+                }
+            }
+
+            function addToHistory(calculation) {
+                const historyItem = document.createElement('div');
+                historyItem.classList.add('history-item');
+                historyItem.innerHTML = `<div class="history-calculation">${calculation}</div>`;
+                historyList.appendChild(historyItem);
+            }
+
+            function clearHistory() {
+                historyList.innerHTML = '';
+            }
+        });
+
+        // Hub functionality for calculator selection
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all calculator type buttons
+            const calculatorTypes = document.querySelectorAll('.calculator-type');
+            const calculatorContainers = document.querySelectorAll('.calculator-container');
+
+            // Add event listeners to calculator type buttons
+            calculatorTypes.forEach(type => {
+                type.addEventListener('click', function() {
+                    // Get the calculator type from data attribute
+                    const calculatorType = this.getAttribute('data-calculator');
+
+                    // Remove active class from all calculator types
+                    calculatorTypes.forEach(type => {
+                        type.classList.remove('active');
+                    });
+
+                    // Add active class to clicked calculator type
+                    this.classList.add('active');
+
+                    // Hide all calculator containers
+                    calculatorContainers.forEach(container => {
+                        container.classList.remove('active');
+                    });
+
+                    // Show the selected calculator container
+                    const selectedCalculator = document.getElementById(calculatorType + 'Calculator');
+                    if (selectedCalculator) {
+                        selectedCalculator.classList.add('active');
+                    }
+
+                    // Update sarcastic message based on calculator type
+                    updateSarcasticMessage(calculatorType);
+                });
+            });
+
+            // Function to update sarcastic message
+            window.updateSarcasticMessage = function(calculatorType) {
+                const sarcasticMessage = document.getElementById('sarcasticMessage');
+                if (!sarcasticMessage) return;
+
+                const messages = {
+                    basic: "Welcome to the calculator that judges your math skills silently.",
+                    scientific: "For when you want to feel smarter than you actually are.",
+                    financial: "Making money decisions with this? Good luck with that.",
+                    bmi: "The calculator that judges your body, so other people don't have to.",
+                    mortgage: "Calculate how long you'll be eating ramen to afford a house.",
+                    sleep: "Find out exactly how sleep-deprived you are. Spoiler: very.",
+                    snow: "Calculate your odds of a snow day. Spoiler: You're still going to work.",
+                    calorie: "The calculator that makes you regret that second donut.",
+                    ai: "When you're too lazy to solve it yourself, let AI do it.",
+                    dating: "Calculating your dating success probability: Error. Divide by zero.",
+                    excuse: "Generate excuses that are slightly more believable than 'my dog ate it'.",
+                    procrastination: "Calculate how long you can put things off before actual panic.",
+                    meeting: "Find out how much of your life is wasted in meetings. It's depressing."
+                };
+
+                sarcasticMessage.textContent = messages[calculatorType] || messages.basic;
+            };
+        });
+    </script>
 </body>
 </html>
